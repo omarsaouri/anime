@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import AnimeCard from './AnimeCard';
+import CurrentDate from './CurrentDate';
+import CardsContainer from './CardsContainer';
 import './App.css';
 
 function App() {
+  
+  function getDayName() {
+    const date = new Date();
+    return date.toLocaleDateString("en-US", { weekday: 'long' });
+  }
+
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.toLocaleDateString("en-US",{month:'short'});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>    
+      <CurrentDate CurrentDateMonth= {day +" "+month} CurrentDateDay={getDayName()}></CurrentDate>
+      <CardsContainer CurrentDateDay={getDayName()}></CardsContainer>
+    </>
   );
 }
 

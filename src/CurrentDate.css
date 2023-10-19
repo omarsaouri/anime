@@ -1,0 +1,20 @@
+.current-date-container {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.current-date-container p {
+    color: rgb(211, 211, 211);
+}
+
+.current-date-container h2 {
+    font-size: 3em;
+    color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
+    .current-date-container h2{
+        border-bottom: 2px var(--tertiary-color) solid;
+    }
+}

@@ -1,0 +1,56 @@
+.anime-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--tertiary-color);
+    border-radius: 7px; 
+    padding: 10px;  
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    border-bottom: var(--highlight-color) 1px solid;
+}
+
+.card:last-of-type {
+    border-bottom: none;
+}
+
+.anime-date {
+    color: var(--highlight-color);
+    font-weight: 700;
+    font-size: 1.4em;
+    flex: 1;
+}
+
+.anime-info {
+    flex: 3;
+    margin-left: 20px;
+}
+
+.anime-img {
+    width: 45px;
+}
+
+.anime-title {
+    font-size: 1.1em;
+}
+
+.anime-eps {
+    color: rgb(211, 211, 211);
+    font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    .anime-cards-container {
+        width: 100%;
+        border: none;
+        border-radius: unset;
+    }
+}
